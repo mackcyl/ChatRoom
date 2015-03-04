@@ -1,0 +1,29 @@
+
+
+.roomClass{
+
+}
+.roomInfo{
+
+}
+
+.contentWindow{
+    width: 500px;
+    height: 500px;
+    background-color: burlywood;
+}
+.inputWindow{
+
+}
+
+.sendBtn{
+    width: 100px;
+    height: 50px;
+    margin-top: 0px;
+    border-top-width: 1px;
+
+}
+
+.userList{
+
+}

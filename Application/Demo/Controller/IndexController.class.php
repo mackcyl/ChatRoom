@@ -10,9 +10,8 @@ namespace Demo\Controller;
 
 use Demo\Model\ChatHistory;
 use Demo\Model\RoomModel;
-use Think\Controller;
 
-class ChatRoomController extends Controller{
+class IndexController extends BaseController{
 
     protected $roomId = 1;
 
@@ -21,8 +20,7 @@ class ChatRoomController extends Controller{
         $roomModel = new RoomModel();
 
         $rootObj =$roomModel->getRootInfoById($this->roomId);
-
-        $this->assign('roomInfo',$rootObj['info']);
+        $this->assign('roomInfo',$rootObj);
         $this->assign('chatHistory',$rootObj['chatHistory']);
         $this->assign('roomId',$this->roomId);
 
@@ -34,7 +32,7 @@ class ChatRoomController extends Controller{
      * 取聊天记录
      */
     public function ajaxLoadChatHistory(){
-        $room = I('roomId','');
+        $room = I('r','');
         $chatHistoryModel = new ChatHistory();
         $chatHistory = $chatHistoryModel->getListByRoomId($room);
         $this->success($chatHistory);
@@ -45,10 +43,10 @@ class ChatRoomController extends Controller{
      * 消息发送
      */
     public function ajaxSendMsg(){
-        $message = I('message','');
-        $msgType = I('msgType','');
-        $room = I('roomId','');
-        $user = I('userId','');
+        $message = I('m','');
+        $msgType = I('t','');
+        $room = I('r','');
+        $user = I('u','');
 
         $chatHistoryModel = new ChatHistory();
 
