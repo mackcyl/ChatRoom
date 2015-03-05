@@ -25,6 +25,15 @@ class ChatHistory extends Model {
         $orderStr = ' create_time asc';
         $historyList = $this->where($where)->order($orderStr)->select();
 
+        $s_id = session('s_id');
+        foreach($historyList as $key=>$value){
+            if(trim($s_id) == trim($value['s_id'])){
+                $historyList[$key]['cssStr'] = 'selfMsg';
+            }else{
+                $historyList[$key]['cssStr'] = 'otherMsg';
+            }
+        }
+
         return $historyList;
 
     }

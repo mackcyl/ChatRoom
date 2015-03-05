@@ -48,10 +48,16 @@
             <?php if(is_array($chatHistory)): $i = 0; $__LIST__ = $chatHistory;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$content): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($content["cssStr"]) && ($content["cssStr"] !== ""))?($content["cssStr"]):'otherMsg'); ?>"><?php echo ($content["msg_content"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
-    <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-        <textarea style="margin: 0px; width: 768px; height: 121px;" id="sendContent"></textarea>
-        <button id="sendBtn">发送</button>
-    </div>
+
+    <?php if($client == 1): ?><div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+            <button id="praiseBtn">点赞</button>
+        </div>
+     <?php else: ?>
+        <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+            <textarea style="margin: 0px; width: 768px; height: 121px;" id="sendContent"></textarea>
+            <button id="sendBtn">发送</button>
+        </div><?php endif; ?>
+
 
 
 <script src="<?php echo ($view_js_dir); ?>/chat_room.js"></script>

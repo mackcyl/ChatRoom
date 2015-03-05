@@ -10,6 +10,7 @@ namespace Demo\Controller;
 
 use Demo\Model\ChatHistory;
 use Demo\Model\RoomModel;
+use Org\Util\String;
 
 class IndexController extends BaseController{
 
@@ -17,6 +18,11 @@ class IndexController extends BaseController{
 
     public function index(){
 
+
+        $s_id = String::uuid();
+
+
+        session('s_id',$s_id);
         $roomModel = new RoomModel();
 
         $rootObj =$roomModel->getRootInfoById($this->roomId);
@@ -29,6 +35,7 @@ class IndexController extends BaseController{
             session('end_time',$eTimeObj['create_time']);
         }
         $this->assign('roomInfo',$rootObj);
+        $this->assign('s_id',$s_id);
         $this->assign('chatHistory',$rootObj['chatHistory']);
         $this->assign('roomId',$this->roomId);
         $this->display();
@@ -73,7 +80,7 @@ class IndexController extends BaseController{
         $room = I('r','');
         $user = I('u','匿名');
         $ruser = I('ru','all');
-
+        $s_id = session('s_id');
         $chatHistoryModel = new ChatHistory();
 
         $msgObj['msg_content'] = $message;
@@ -81,6 +88,7 @@ class IndexController extends BaseController{
         $msgObj['room_id'] = $room;
         $msgObj['send_user'] = $user;
         $msgObj['recipient_user'] = $ruser;
+        $msgObj['s_id'] = $s_id;
         $msgObj['create_time'] = time();
 
         $newObj = $chatHistoryModel->update($msgObj);
