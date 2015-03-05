@@ -6,8 +6,10 @@ $(document).ready(function(){
 
 
     $("#sendBtn").on('click',sendMessage);
-    setInterval(function () {getMessage(); }, 800);
 
+    setInterval(function () {getMessage(); }, 800);
+    var $contentDiv = document.getElementById('msgContent');
+    $contentDiv.scrollTop = $contentDiv.scrollHeight;
 
     function sendMessage(){
 
@@ -24,7 +26,7 @@ $(document).ready(function(){
         }
 
 
-        var urlStr ="/Demo/Index/ajaxSendMsg";
+        var urlStr = T.D.APP+"/Demo/Index/ajaxSendMsg";
 
         /**
          * r: room (房间)
@@ -44,6 +46,8 @@ $(document).ready(function(){
                 }else{
 
                 }
+
+                $("#sendContent").val('');
             }
         });
     }
@@ -51,7 +55,8 @@ $(document).ready(function(){
     function getMessage(){
 
         var rootId = $("#rootId").val();
-        var urlStr ="/Demo/Index/ajaxLoadChatHistory";
+        var urlStr =T.D.APP + "/Demo/Index/ajaxLoadChatHistory";
+
         $.ajax({
             type: "POST",
             url: urlStr,
@@ -59,9 +64,10 @@ $(document).ready(function(){
             dataType : "JSON",
             success: function(jsonResult){
 
-                console.log(jsonResult);
                 if(jsonResult.status){
-
+                    $("#msgContent").append(jsonResult.info.htmlStr);
+                    var $contentDiv = document.getElementById('msgContent');
+                    $contentDiv.scrollTop = $contentDiv.scrollHeight;
                 }else{
 
                 }

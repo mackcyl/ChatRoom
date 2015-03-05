@@ -21,7 +21,7 @@ class RoomModel extends Model\RelationModel{
             'class_name'    => 'ChatHistory',
             'foreign_key'   => 'room_id',
             'mapping_name'  => 'chatHistory',
-            'mapping_order' => 'create_time desc',
+            'mapping_order' => 'create_time asc',
         )
 
     );

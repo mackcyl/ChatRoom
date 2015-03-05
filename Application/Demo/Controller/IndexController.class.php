@@ -20,10 +20,17 @@ class IndexController extends BaseController{
         $roomModel = new RoomModel();
 
         $rootObj =$roomModel->getRootInfoById($this->roomId);
+
+        $rhistory = $rootObj['chatHistory'];
+        $eTimeObj = end($rhistory);
+        if(empty($eTimeObj)){
+            session('end_time',time());
+        }else{
+            session('end_time',$eTimeObj['create_time']);
+        }
         $this->assign('roomInfo',$rootObj);
         $this->assign('chatHistory',$rootObj['chatHistory']);
         $this->assign('roomId',$this->roomId);
-
         $this->display();
     }
 
@@ -34,8 +41,26 @@ class IndexController extends BaseController{
     public function ajaxLoadChatHistory(){
         $room = I('r','');
         $chatHistoryModel = new ChatHistory();
-        $chatHistory = $chatHistoryModel->getListByRoomId($room);
-        $this->success($chatHistory);
+
+        $endTime = session('end_time');
+        if(!empty($endTime)){
+            $where['create_time'] = array("GT",$endTime);
+        }
+
+        $chatHistory = $chatHistoryModel->getListByRoomId($room,$where);
+
+
+        $this->assign('chatHistory',$chatHistory);
+        $htmlStr = $this->fetch('content.inc');
+
+
+        $rhistory = $chatHistory;
+        $eTimeObj = end($rhistory);
+        if(!empty($eTimeObj)){
+            session('end_time',$eTimeObj['create_time']);
+        }
+
+        $this->success(array("htmlStr"=>$htmlStr,"querySql"=>$chatHistoryModel->getLastSql()));
     }
 
 
@@ -46,23 +71,23 @@ class IndexController extends BaseController{
         $message = I('m','');
         $msgType = I('t','');
         $room = I('r','');
-        $user = I('u','');
+        $user = I('u','匿名');
+        $ruser = I('ru','all');
 
         $chatHistoryModel = new ChatHistory();
 
-        $msgObj['message'] = $message;
-        $msgObj['type'] = $msgType;
+        $msgObj['msg_content'] = $message;
+        $msgObj['msg_type'] = $msgType;
         $msgObj['room_id'] = $room;
-        $msgObj['user_name'] = $user;
-        $msgObj['send_time'] = time();
+        $msgObj['send_user'] = $user;
+        $msgObj['recipient_user'] = $ruser;
+        $msgObj['create_time'] = time();
 
-        $chatHistoryModel->update($msgObj);
+        $newObj = $chatHistoryModel->update($msgObj);
 
-
+        $this->success($newObj);
 
     }
 
-    protected function getChatHistoryByRoom(){
-    }
 
 } 

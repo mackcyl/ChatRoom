@@ -23,57 +23,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="25" selection-start="754" selection-end="754" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="437">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatRoomController.class.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Demo/Controller/ChatRoomController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="45" selection-start="367" selection-end="382" vertical-scroll-proportion="-8.142858" vertical-offset="95" max-vertical-offset="1330">
-              <folding>
-                <element signature="e#117#144#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ChatHistory.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Demo/Model/ChatHistory.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="5" selection-start="794" selection-end="794" vertical-scroll-proportion="-23.071428" vertical-offset="0" max-vertical-offset="779">
+            <state line="40" column="39" selection-start="834" selection-end="834" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="1083">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoomModel.class.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Model.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ThinkPHP/Mode/Lite/Model.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="28177">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomModel.class.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Demo/Model/RoomModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="9" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.85600704" vertical-offset="0" max-vertical-offset="1216">
+            <state line="24" column="9" selection-start="483" selection-end="483" vertical-scroll-proportion="-11.178572" vertical-offset="48" max-vertical-offset="1216">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseController.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Demo/Controller/BaseController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="475">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexController.class.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Demo/Controller/IndexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="55" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="-21.035715" vertical-offset="342" max-vertical-offset="1748">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".htaccess" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.inc.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Demo/View/Index/content.inc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="9" selection-start="131" selection-end="131" vertical-scroll-proportion="-1.3571428" vertical-offset="0" max-vertical-offset="152">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat_room.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Demo/Data/chat_room.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1045">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Demo/View/ChatRoom/index.html">
+        <entry file="file://$PROJECT_DIR$/Application/Demo/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="266">
+            <state line="45" column="18" selection-start="991" selection-end="996" vertical-scroll-proportion="-30.535715" vertical-offset="0" max-vertical-offset="1216">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chat_room.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Demo/View/js/chat_room.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="27" selection-start="313" selection-end="313" vertical-scroll-proportion="0.20652173" vertical-offset="0" max-vertical-offset="1615">
               <folding />
             </state>
           </provider>
@@ -94,9 +131,13 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/room.html" />
         <option value="$PROJECT_DIR$/Application/Demo/View/ChatRoom/index.html" />
-        <option value="$PROJECT_DIR$/Application/Demo/Model/ChatHistory.class.php" />
         <option value="$PROJECT_DIR$/Application/Demo/Controller/ChatRoomController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Demo/Model/ChatHistory.class.php" />
+        <option value="$PROJECT_DIR$/Application/Demo/View/Index/content.inc.html" />
+        <option value="$PROJECT_DIR$/Application/Demo/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Application/Demo/Model/RoomModel.class.php" />
+        <option value="$PROJECT_DIR$/Application/Demo/Controller/IndexController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Demo/View/js/chat_room.js" />
       </list>
     </option>
   </component>
@@ -104,7 +145,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="2560" />
-    <option name="height" value="1341" />
+    <option name="height" value="1348" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -132,6 +173,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,11 +234,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
+              <option name="myItemId" value="Runtime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -222,7 +278,55 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChatRoom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,7 +398,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -340,7 +443,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1341" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="1348" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -348,7 +451,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13216561" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13335988" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
@@ -375,6 +478,34 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Application/README.md">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="114">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="25" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="589">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/Model/ChatHistory.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="5" selection-start="794" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="741" max-vertical-offset="874">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/Model/RoomModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="9" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.0" vertical-offset="1064" max-vertical-offset="1216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/README.md">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="114">
           <folding />
         </state>
@@ -382,44 +513,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1189">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1189" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="754" selection-end="754" vertical-scroll-proportion="-6.107143" vertical-offset="0" max-vertical-offset="437">
+        <state line="17" column="25" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Demo/View/ChatRoom/index.html">
+    <entry file="file://$PROJECT_DIR$/Application/Demo/Controller/BaseController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="266">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Mode/Lite/Model.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="6" selection-start="675" selection-end="675" vertical-scroll-proportion="-4.75" vertical-offset="0" max-vertical-offset="28177">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Demo/Model/ChatHistory.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="5" selection-start="794" selection-end="794" vertical-scroll-proportion="-23.071428" vertical-offset="0" max-vertical-offset="779">
+        <state line="40" column="39" selection-start="834" selection-end="834" vertical-scroll-proportion="-23.75" vertical-offset="0" max-vertical-offset="1083">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Demo/Controller/ChatRoomController.class.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="45" selection-start="367" selection-end="382" vertical-scroll-proportion="-8.142858" vertical-offset="95" max-vertical-offset="1330">
-          <folding>
-            <element signature="e#117#144#0" expanded="true" />
-          </folding>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1196">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Demo/Model/RoomModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="9" selection-start="1211" selection-end="1211" vertical-scroll-proportion="0.85600704" vertical-offset="0" max-vertical-offset="1216">
+        <state line="24" column="9" selection-start="483" selection-end="483" vertical-scroll-proportion="-11.178572" vertical-offset="48" max-vertical-offset="1216">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="0" selection-start="1261" selection-end="1261" vertical-scroll-proportion="-21.035715" vertical-offset="342" max-vertical-offset="1748">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="18" selection-start="991" selection-end="996" vertical-scroll-proportion="-30.535715" vertical-offset="0" max-vertical-offset="1216">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/View/Index/content.inc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="131" selection-end="131" vertical-scroll-proportion="-1.3571428" vertical-offset="0" max-vertical-offset="152">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/Data/chat_room.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1196">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Demo/View/js/chat_room.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="27" selection-start="313" selection-end="313" vertical-scroll-proportion="0.20652173" vertical-offset="0" max-vertical-offset="1615">
           <folding />
         </state>
       </provider>
