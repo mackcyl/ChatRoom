@@ -11,7 +11,7 @@
  Target Server Version : 50538
  File Encoding         : utf-8
 
- Date: 03/03/2015 17:46:28 PM
+ Date: 03/05/2015 13:27:28 PM
 */
 
 SET NAMES utf8;
@@ -29,6 +29,7 @@ CREATE TABLE `cr_chat_history` (
   `send_user` varchar(255) DEFAULT NULL COMMENT '发送人',
   `recipient_user` varchar(255) DEFAULT NULL,
   `create_time` int(20) DEFAULT NULL,
+  `s_id` varchar(255) DEFAULT NULL COMMENT '当前会话ID',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='聊天室消息记录;';
 
@@ -44,6 +45,13 @@ CREATE TABLE `cr_room` (
   `create_time` int(20) DEFAULT NULL COMMENT '创建时间',
   `room_admin` varchar(200) DEFAULT NULL COMMENT '管理员',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='聊天室';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='聊天室';
+
+-- ----------------------------
+--  Records of `cr_room`
+-- ----------------------------
+BEGIN;
+INSERT INTO `cr_room` VALUES ('1', 'test', '1', '测试的', null, 'mackcyl');
+COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
