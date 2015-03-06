@@ -1,3 +1,9 @@
 <volist name="chatHistory" id="content">
-    <li class="{$content.cssStr|default='otherMsg'}">{$content.msg_content}</li>
+    <li class="{$content.cssStr|default='otherMsg'}">
+        <div class="msgc">
+            {$content.nickname}:<br>
+           {$content.msg_content}
+        </div>
+
+    </li>
 </volist>

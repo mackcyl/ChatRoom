@@ -26,12 +26,16 @@ class ChatHistory extends Model {
         $historyList = $this->where($where)->order($orderStr)->select();
 
         $s_id = session('s_id');
+
+        $usersMod = new UsersModel();
         foreach($historyList as $key=>$value){
             if(trim($s_id) == trim($value['s_id'])){
                 $historyList[$key]['cssStr'] = 'selfMsg';
             }else{
                 $historyList[$key]['cssStr'] = 'otherMsg';
             }
+
+            $historyList[$key]['nickname'] = $usersMod->getUsersNicknameByUuid($value['s_id']);
         }
 
         return $historyList;

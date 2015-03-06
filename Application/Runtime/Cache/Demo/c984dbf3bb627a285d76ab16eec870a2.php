@@ -8,6 +8,8 @@
   <title>聊天室demo</title>
     <link type="text/css" rel="stylesheet" href="<?php echo ($view_css_dir); ?>/style.css" />
     <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" href="<?php echo ($view_css_dir); ?>/ui-dialog.css">
+
 
     <script>
         //按照包来管理
@@ -18,7 +20,8 @@
             var d = {
                 "ROOT"   : "/ChatRoom", //当前网站地址
                 "APP"    : "/ChatRoom", //当前项目地址
-                "PUBLIC" : "/ChatRoom/Public" //项目公共目录地址
+                "PUBLIC" : "/ChatRoom/Public", //项目公共目录地址
+                "FIRST_USER":<?php echo ($first_user); ?>
             }
             return d;
         })();
@@ -38,14 +41,21 @@
         <span>聊天室名称:<?php echo ($roomInfo["name"]); ?></span>
         <span>聊天室描述:<?php echo ($roomInfo["room_desc"]); ?></span>
         <span>聊天室管理员:<?php echo ($roomInfo["room_admin"]); ?></span>
+        <span>当前用户昵称:<span id="loginUserSpan"><?php echo ($nickname); ?></span></span>
+        <input type="hidden" id="loginUser" value="<?php echo ($nickname); ?>">
 
-        <input type="hidden" id="loginUser" value="">
         <input type="hidden" id="rootId" value="<?php echo ($roomInfo["id"]); ?>">
 
     </div>
     <div id="convo" data-from="<?php echo ($roomInfo["room_admin"]); ?>">
         <ul class="chat-thread" id="msgContent">
-            <?php if(is_array($chatHistory)): $i = 0; $__LIST__ = $chatHistory;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$content): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($content["cssStr"]) && ($content["cssStr"] !== ""))?($content["cssStr"]):'otherMsg'); ?>"><?php echo ($content["msg_content"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
+            <?php if(is_array($chatHistory)): $i = 0; $__LIST__ = $chatHistory;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$content): $mod = ($i % 2 );++$i;?><li class="<?php echo ((isset($content["cssStr"]) && ($content["cssStr"] !== ""))?($content["cssStr"]):'otherMsg'); ?>">
+        <div class="msgc">
+            <?php echo ($content["nickname"]); ?>:<br>
+           <?php echo ($content["msg_content"]); ?>
+        </div>
+
+    </li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
 
@@ -60,6 +70,7 @@
 
 
 
+<script src="<?php echo ($view_js_dir); ?>/dialog-min.js"></script>
 <script src="<?php echo ($view_js_dir); ?>/chat_room.js"></script>
 </body>
 </html>

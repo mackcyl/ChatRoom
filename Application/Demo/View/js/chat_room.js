@@ -3,12 +3,56 @@
  */
 $(document).ready(function(){
 
+    var d = dialog({
+        title: '请输入昵称',
+        content: '<input autofocus id="nickname" style="width: 210px;" />',
+        okValue: '确定',
+        ok: function () {
+            var that = this;
+            this.title('提交中…');
 
+            var $rootId = $("#rootId").val();
+            var $nickname = $("#nickname").val();
+            var urlStr =T.D.APP + "/Demo/Index/ajaxSetNickname";
+
+            $("#loginUserSpan").html($nickname);
+            $("#loginUser").val($nickname);
+
+            $.ajax({
+                type: "POST",
+                url: urlStr,
+                data: { r: $rootId,nickname:$nickname},
+                dataType : "JSON",
+                success: function(jsonResult){
+                    if(jsonResult.status){
+                        $("#msgContent").append(jsonResult.info.htmlStr);
+
+                        setInterval(function () {getMessage(); }, 800);
+                    }else{
+
+                    }
+                    that.close().remove();
+                }
+            });
+
+            return false;
+        },
+        cancelValue: '取消',
+        cancel: function () {
+            alert('必须设置昵称');
+            return false;
+        }
+    }).width(220);
+
+    if(T.D.FIRST_USER){
+        d.showModal();
+    }else{
+//        setInterval(function () {getMessage(); }, 800);
+    }
 
     $("#sendBtn").on('click',sendMessage);
     $("#praiseBtn").on('click',addPraise);
 
-    setInterval(function () {getMessage(); }, 800);
     var $contentDiv = document.getElementById('msgContent');
     $contentDiv.scrollTop = $contentDiv.scrollHeight;
 
@@ -16,7 +60,7 @@ $(document).ready(function(){
     function addPraise(){
         var rootId = $("#rootId").val();
         var sendUser = $("#loginUser").val();
-        var messageContent = "赞赞赞赞赞赞赞赞赞赞赞赞赞赞!"
+        var messageContent = "赞";
 
         if(sendUser == '' || sendUser==null || sendUser ==undefined){
             sendUser = '匿名'
@@ -81,7 +125,8 @@ $(document).ready(function(){
                 }else{
 
                 }
-
+                var $contentDiv = document.getElementById('msgContent');
+                $contentDiv.scrollTop = $contentDiv.scrollHeight;
                 $("#sendContent").val('');
             }
         });
@@ -101,8 +146,6 @@ $(document).ready(function(){
 
                 if(jsonResult.status){
                     $("#msgContent").append(jsonResult.info.htmlStr);
-                    var $contentDiv = document.getElementById('msgContent');
-                    $contentDiv.scrollTop = $contentDiv.scrollHeight;
                 }else{
 
                 }

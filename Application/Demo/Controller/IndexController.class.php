@@ -10,23 +10,73 @@ namespace Demo\Controller;
 
 use Demo\Model\ChatHistory;
 use Demo\Model\RoomModel;
+use Demo\Model\UsersModel;
 use Org\Util\String;
 
 class IndexController extends BaseController{
 
     protected $roomId = 1;
 
+    public function unit(){
+        session('s_id',null);
+    }
+
     public function index(){
+        $s_id =session('s_id');
 
-
-        $s_id = String::uuid();
-
-
-        session('s_id',$s_id);
         $roomModel = new RoomModel();
-
         $rootObj =$roomModel->getRootInfoById($this->roomId);
 
+        if(empty($s_id)){
+            $this->assign('first_user',1);
+        }else{
+
+            $userMod = new UsersModel();
+            $nickname = $userMod->getUsersNicknameByUuid($s_id);
+            $this->assign('nickname',$nickname);
+            $this->assign('first_user',0);
+            $rhistory = $rootObj['chatHistory'];
+            $eTimeObj = end($rhistory);
+            if(empty($eTimeObj)){
+                session('end_time',time());
+            }else{
+                session('end_time',$eTimeObj['create_time']);
+            }
+            $this->assign('s_id',$s_id);
+            $this->assign('chatHistory',$rootObj['chatHistory']);
+
+        }
+
+        $this->assign('roomInfo',$rootObj);
+        $this->assign('roomId',$this->roomId);
+        $this->display();
+    }
+
+    public function ajaxSetNickname(){
+
+        $nickname = I('nickname','匿名');
+        $userMod = new UsersModel();
+
+        $userObj = $userMod->getUsersInfoByNickname($nickname);
+        if(empty($userObj)){
+            $s_id = String::uuid();
+            session('s_id',$s_id);
+            $userObj['nickname'] = $nickname;
+            $userObj['uuid'] = $s_id;
+            $userObj['reg_time'] = time();
+            $userObj['last_login_time'] = time();
+            $userMod->addObj($userObj);
+        }else{
+            $s_id = $userObj['uuid'];
+            session('s_id',$s_id);
+            $userObj['last_login_time'] = time();
+            $userMod->update($userObj);
+        }
+
+
+
+        $roomModel = new RoomModel();
+        $rootObj =$roomModel->getRootInfoById($this->roomId);
         $rhistory = $rootObj['chatHistory'];
         $eTimeObj = end($rhistory);
         if(empty($eTimeObj)){
@@ -34,11 +84,9 @@ class IndexController extends BaseController{
         }else{
             session('end_time',$eTimeObj['create_time']);
         }
-        $this->assign('roomInfo',$rootObj);
-        $this->assign('s_id',$s_id);
         $this->assign('chatHistory',$rootObj['chatHistory']);
-        $this->assign('roomId',$this->roomId);
-        $this->display();
+        $htmlStr = $this->fetch('content.inc');
+        $this->success(array("htmlStr"=>$htmlStr,"querySql"=>$roomModel->getLastSql()));
     }
 
 

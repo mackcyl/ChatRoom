@@ -9,6 +9,7 @@
 namespace Demo\Controller;
 
 
+use Org\Util\String;
 use Think\Controller;
 
 class BaseController extends Controller{
@@ -27,6 +28,10 @@ class BaseController extends Controller{
         }else{
             $this->assign("client",0);
         }
+
+    }
+
+    protected  function regUsers(){
 
 
     }

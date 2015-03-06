@@ -30,6 +30,17 @@ class RoomModel extends Model\RelationModel{
     public function getRootInfoById($rootId){
         $roomInfo = $this->relation(true)->find($rootId);
 
+        $s_id = session('s_id');
+
+        $usersMod = new UsersModel();
+        foreach($roomInfo['chatHistory'] as $key=>$value){
+            if(trim($s_id) == trim($value['s_id'])){
+                $roomInfo['chatHistory'][$key]['cssStr'] = 'selfMsg';
+            }else{
+                $roomInfo['chatHistory'][$key]['cssStr'] = 'otherMsg';
+            }
+            $roomInfo['chatHistory'][$key]['nickname'] = $usersMod->getUsersNicknameByUuid(trim($value['s_id']));
+        }
         return $roomInfo;
     }
 
